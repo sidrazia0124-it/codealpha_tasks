@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #08090c;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background Glowing Orbs */
+.orb {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.35;
+}
+.orb-1 { top: 15%; left: 20%; background: #00f2fe; }
+.orb-2 { bottom: 20%; right: 20%; background: #f355da; }
+
+/* Glassmorphism Design */
+.glass {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Calculator Layout */
+.calculator {
+    width: 340px;
+    padding: 25px;
+}
+
+/* Display Screen Style */
+.display-container {
+    margin-bottom: 25px;
+}
+#screen {
+    width: 100%;
+    height: 70px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    outline: none;
+    color: #fff;
+    font-size: 32px;
+    text-align: right;
+    padding: 0 15px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
+}
+
+/* Buttons Configuration */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    height: 55px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Special Button Colors for Neon Effects */
+.btn-operator {
+    color: #00f2fe;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.4);
+}
+.btn-clear {
+    color: #ff4a4a;
+    text-shadow: 0 0 8px rgba(255, 74, 74, 0.4);
+}
+.btn-equal {
+    grid-row: span 2;
+    height: 122px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+.btn-equal:hover {
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.7);
+}
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Footer style alignment */
+.footer {
+    position: absolute;
+    bottom: 15px;
+    color: #4a5568;
+    font-size: 12px;
+    text-align: center;
+}
