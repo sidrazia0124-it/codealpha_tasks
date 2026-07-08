@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="top-bar">
+            <i class="fas fa-chevron-down"></i>
+            <span>Now Playing</span>
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+
+        <div class="img-area">
+            <img src="" id="track-art" alt="Music Poster">
+        </div>
+        <div class="song-details">
+            <p id="track-title" class="name"></p>
+            <p id="track-artist" class="artist"></p>
+        </div>
+
+        <div class="progress-area">
+            <input type="range" id="progress-bar" min="0" max="100" value="0">
+            <div class="timer">
+                <span id="current-time">0:00</span>
+                <span id="duration-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <i id="repeat-plist" class="fas fa-redo" title="Playlist looped"></i>
+            <i id="prev" class="fas fa-step-backward"></i>
+            <div class="play-pause">
+                <i id="play-btn" class="fas fa-play"></i>
+            </div>
+            <i id="next" class="fas fa-step-forward"></i>
+            <i id="more-music" class="fas fa-list"></i>
+        </div>
+
+        <div class="volume-container">
+            <i class="fas fa-volume-up" id="volume-icon"></i>
+            <input type="range" id="volume-slider" min="0" max="100" value="70">
+            <span id="volume-percentage">70%</span>
+        </div>
+
+        <div class="playlist-section">
+            <h3 class="playlist-title"><i class="fas fa-list-ul"></i> Playlist / Tracks</h3>
+            <div class="music-playlist">
+                <div class="track-item" onclick="playTrackDirect(0)">
+                    <div class="track-info">
+                        <span class="track-num">01</span>
+                        <div>
+                            <p class="track-name">Cyberbeats Retro</p>
+                            <p class="track-author">Tech Wave</p>
+                        </div>
+                    </div>
+                    <span class="track-time">3:45</span>
+                </div>
+                <div class="track-item" onclick="playTrackDirect(1)">
+                    <div class="track-info">
+                        <span class="track-num">02</span>
+                        <div>
+                            <p class="track-name">Future Producer</p>
+                            <p class="track-author">Cyber Beats</p>
+                        </div>
+                    </div>
+                    <span class="track-time">4:12</span>
+                </div>
+                <div class="track-item" onclick="playTrackDirect(2)">
+                    <div class="track-info">
+                        <span class="track-num">03</span>
+                        <div>
+                            <p class="track-name">Blinding Lights</p>
+                            <p class="track-author">The Weeknd</p>
+                        </div>
+                    </div>
+                    <span class="track-time">3:20</span>
+                </div>
+                <div class="track-item" onclick="playTrackDirect(3)">
+                    <div class="track-info">
+                        <span class="track-num">04</span>
+                        <div>
+                            <p class="track-name">Shape of You</p>
+                            <p class="track-author">Ed Sheeran</p>
+                        </div>
+                    </div>
+                    <span class="track-time">3:53</span>
+                </div>
+                <div class="track-item" onclick="playTrackDirect(4)">
+                    <div class="track-info">
+                        <span class="track-num">05</span>
+                        <div>
+                            <p class="track-name">Stay</p>
+                            <p class="track-author">The Kid LAROI & Bieber</p>
+                        </div>
+                    </div>
+                    <span class="track-time">2:21</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="main-audio"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
