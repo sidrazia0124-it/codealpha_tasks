@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Tasks - Sidra Zia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/dist/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #a855f7;
+        }
+        p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .task-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            margin: 15px 0;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .task-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4);
+        }
+        .task-btn i {
+            font-size: 1.2rem;
+        }
+        .footer-branding {
+            margin-top: 30px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>CodeAlpha Internship Tasks</h1>
+        <p>Frontend Development Projects Dashboard</p>
+        
+        <!-- Task 1: Calculator -->
+        <a href="./calculator/" class="task-btn">
+            <i class="fas fa-calculator"></i>
+            <span>Calculator Task</span>
+        </a>
+
+        <!-- Task 2: Music Player -->
+        <a href="./music player/" class="task-btn">
+            <i class="fas fa-music"></i>
+            <span>Music Player Task</span>
+        </a>
+
+        <!-- Task 3: Portfolio -->
+        <a href="./portfolio/" class="task-btn">
+            <i class="fas fa-user-tie"></i>
+            <span>My Portfolio</span>
+        </a>
+
+        <div class="footer-branding">design by sidra Zia</div>
+    </div>
+
+</body>
+</html>
